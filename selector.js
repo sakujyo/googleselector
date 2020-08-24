@@ -12,13 +12,16 @@ let f = (n) => {
 }
 f(document.body);
 var elements = []
-for (const n of document.body.getElementsByTagName('h3')) {
-	n.tabIndex = 0;
-	elements.push(n);
+for (const e of document.body.getElementsByTagName('h3')) {
+	e.tabIndex = 0;
+	elements.push(e);
 }
 document.getElementsByClassName('gLFyf gsfi')[0].tabIndex = 0;
-document.getElementsByClassName('G0iuSb')[0].tabIndex = 0;
-document.getElementsByClassName('G0iuSb')[1].tabIndex = 0;
+for (const e of document.getElementsByClassName('G0iuSb')) {
+	e.tabIndex = 0;
+}
+//document.getElementsByClassName('G0iuSb')[0].tabIndex = 0;
+//document.getElementsByClassName('G0iuSb')[1].tabIndex = 0;
 
 	for (const el of elements) {
 		el.addEventListener('focus', (e) => {
